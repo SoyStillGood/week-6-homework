@@ -3,6 +3,8 @@ import argparse
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+#chose the diabetes dataset
+
 
 
 def main():
