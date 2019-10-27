@@ -2,11 +2,21 @@ import pandas as pd
 import argparse
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 
 #chose the diabetes dataset
 
 
+def plot_data(diabetes):
+    for column1 in diabetes:
+        for column2 in diabetes:
+            x = diabetes[column1]
+            y = diabetes[column2]
 
+            plt.scatter(x, y)
+            plt.xlabel(column1)
+            plt.ylabel(column2)
+            plt.title("{0} x {1}".format(column1, column2))
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-f", "--file", dest="file", help="input data file")
@@ -17,8 +27,26 @@ def main():
     diabetes = pd.read_csv(filepath_or_buffer=file, sep=' ', header=0)
     print(diabetes)
 
-    sns.pairplot(diabetes)
+
+
+    pairs_plot = sns.pairplot(diabetes)
     plt.show()
+    #plot_data(pairs_plot)
+    #plt.show()
+
+
+
+
+
+    #ax = sns.regplot(diabetes)
+    #this doesn't work
+    #plt.show()
+
+
+
+    # coefs = np.polyfit(x, y, 1)  # we also want to do this for 2, 3
+    # xs, new_line = pairs_plot(coefs, min(x), max(x))
+    # plt.plot(xs, new_line)
 # at this point we have the pair of columns scattered
 
 
