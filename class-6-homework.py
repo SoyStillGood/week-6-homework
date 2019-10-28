@@ -30,15 +30,25 @@ def main():
 
 
     pairs_plot = sns.pairplot(diabetes)
-    plt.show()
+    #plt.show()
     #plot_data(pairs_plot)
+    #this doesn't work
     #plt.show()
 
+    #these two (above and below) do the same thing
+
+    # g = sns.PairGrid(diabetes)
+    # g.map(plt.scatter)
+    # plt.show()
+
+    sns.regplot(x="x", y="y", data=diabetes)
+    plt.show()
 
 
 
 
-    #ax = sns.regplot(diabetes)
+
+    #ax = sns.regplot(pairs_plot, x=vars)
     #this doesn't work
     #plt.show()
 
@@ -47,6 +57,7 @@ def main():
     # coefs = np.polyfit(x, y, 1)  # we also want to do this for 2, 3
     # xs, new_line = pairs_plot(coefs, min(x), max(x))
     # plt.plot(xs, new_line)
+
 # at this point we have the pair of columns scattered
 
 
