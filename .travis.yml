@@ -4,4 +4,4 @@ python:
 
   
 script:
-  - week-6-homework.py
+  - class-6-homework.py
