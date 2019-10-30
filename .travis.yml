@@ -8,4 +8,4 @@ before install:
 
 
 script:
-  - python3 class-6-homework.py diabetes.data
+  - python3 class-6-homework.py -f diabetes.data
