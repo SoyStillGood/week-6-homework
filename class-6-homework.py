@@ -48,9 +48,9 @@ def main():
 
 
 
-    ax = sns.regplot(diabetes, x="age", y="sex")
+    #ax = sns.regplot(diabetes, x="age", y="sex")
     # #this doesn't work
-    plt.show()
+    #plt.show()
 
 
 
