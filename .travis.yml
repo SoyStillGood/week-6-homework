@@ -8,5 +8,5 @@ before install:
 
 
 script:
-  - python3 plotting-script.py -H https://www4.stat.ncsu.edu/~boos/var.select/diabetes.rwrite1.txt
+  - python3 plotting-script.py -H -' ' https://www4.stat.ncsu.edu/~boos/var.select/diabetes.rwrite1.txt
   - python3 class-6-homework.py -f https://www4.stat.ncsu.edu/~boos/var.select/diabetes.rwrite1.txt
