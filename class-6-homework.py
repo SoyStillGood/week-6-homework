@@ -30,7 +30,7 @@ def main():
 
 
     pairs_plot = sns.pairplot(diabetes)
-    #plt.show()
+    plt.show()
     #plot_data(pairs_plot)
     #this doesn't work
     #plt.show()
@@ -41,16 +41,16 @@ def main():
     # g.map(plt.scatter)
     # plt.show()
 
-    sns.regplot(x="x", y="y", data=diabetes)
+    # sns.regplot(x="x", y="y", data=diabetes)
+    # plt.show()
+
+
+
+
+
+    ax = sns.regplot(diabetes, x="age", y="sex")
+    # #this doesn't work
     plt.show()
-
-
-
-
-
-    #ax = sns.regplot(pairs_plot, x=vars)
-    #this doesn't work
-    #plt.show()
 
 
 
