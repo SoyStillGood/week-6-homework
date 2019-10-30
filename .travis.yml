@@ -2,6 +2,10 @@ language: python
 python:
   - "3.7"
 
-  
+before install:
+- wget https://www4.stat.ncsu.edu/~boos/var.select/diabetes.rwrite1.txt
+- mv /diabetes.rwrite1.txt ./diabetes.data
+
+
 script:
-  - python3 class-6-homework.py
+  - python3 class-6-homework.py -f "diabetes.data"
